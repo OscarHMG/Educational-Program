@@ -1,4 +1,3 @@
-OPOPO,2,5,IIIIII,LLLLL
-AAAA,1,2,ASDASDASD,PPPP
-AAAA,1,2,ASDASDASD,pqowqpwe
-PALALALAL,1,2,ALALALAL,ALALALA
+Ingieneria en Cmputacion,3,5,Marcos MOncayo,Mateamtica
+Ingieneria en Computacion,8,9,Marlon bedoya,Biologia
+Ingieneria en Computacion,8,9,Oscar Moncayo,Matematica

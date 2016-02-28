@@ -2,18 +2,17 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX 100
-typedef struct elementoLista {
-    char *dato;
+
+typedef struct Elemento {
+    struct Header *contenido;
     struct ElementoLista *siguiente;
 }Elemento;
  
-typedef struct ListaUbicacion{
+typedef struct Pila{
   Elemento *inicio;
   int tamanio;
 } Pila;
  
-
-
 //Struct Header
 typedef struct Header{
 	char *career,*professor,*subject;
@@ -27,9 +26,11 @@ typedef struct Student{
 	int final_score;
 }Student;
 
+
+
 //Prototypes of Functions
 Header * createHeader();
-void inputHeaderInfo(Header *info);
+Header * inputHeaderInfo();
 void saveInfo(Header *info);
 void quitEnter(char *string);
 void inputScores();
@@ -39,17 +40,24 @@ void printStadistics();
 void getFinalScore(char line[], int cont);
 void prinGraph(int score);
 void printWelcomeMessage();
-void headerInput();
+void headerInput(Pila *p);
 Pila* loadHeaders();
 Pila * inicializacion ();
+int printOptionMenu();
+void searchHeader(Pila *p);
 void imprimir_pila (Pila * tas);
+int quitar_pila (Pila * tas);
+void eliminateHeader();
 //Main Function
 struct Header *headers[MAX];
 int main(){
-	int num,i;
+    int opt=0;
+	int num,i,option;
 	Pila *pila= loadHeaders();
+	while(opt==0){
+	//imprimir_pila(pila);
 	printWelcomeMessage();
-	headerInput();
+	headerInput(pila);
 	num = inputNumOfStudents();
 	for(i =0; i<num;i++){
 		inputScores();
@@ -57,16 +65,35 @@ int main(){
 	printf("\n\n");
 	system("cls");
 	printStadistics();
+		
+	option = printOptionMenu();
+	
+	switch(option){
+       case 1:
+            searchHeader(pila);
+            break;
+       case 2:
+            printf("\n\nHeaders: \n\n");
+            imprimir_pila(pila);
+            system("PAUSE");
+            break;
+       case 3:
+            eliminateHeader(pila);
+            break;
+             
+             }
+       }
 	system("PAUSE");
 	return 0;
 }
 
-void headerInput(){
-	Header *info = createHeader();
-	inputHeaderInfo(info);
+void headerInput(Pila *p){
+	Header *info = inputHeaderInfo();
 	saveInfo(info);
+	insertar_pila(p, info);
 }
 void printWelcomeMessage(){
+	system("cls");
 	printf("\n\t\t\tSISTEMA DE CONTROL DE CALIFICACIONES\n");
 	printf("\t\t\tSeccion de Ingreso de Datos\n\n");
 }
@@ -82,13 +109,15 @@ Header * createHeader(){
 }
 
 //This Function ask for the info of the Header
-void inputHeaderInfo(Header *info){
+Header * inputHeaderInfo(){
+    Header *info = createHeader();
 	char *career, *professor, *subject;
 	int course, semester;
 	int ln ;
 	career = (char *)malloc(50 * sizeof(char));
 	professor = (char *)malloc(50 * sizeof(char));
 	subject = (char *)malloc(50 * sizeof(char));
+	fflush(stdin);
 	printf("Career: ");
 	fgets(career, 50, stdin);
 	strcpy(info->career, career);
@@ -112,6 +141,7 @@ void inputHeaderInfo(Header *info){
 	strcpy(info->subject, subject);
 	quitEnter(info->subject);
 	fflush(stdin);
+	return info;
 }
  
 void quitEnter(char *string){
@@ -195,7 +225,7 @@ void printStadistics(){
 	if (file == NULL){
 		printf("\nError de apertura del archivo. \n\n");
 	}else{
-		system("cls");
+		printf("\n\n");
 		printf("\t\t\t STADISTICS\n");
 		while (feof(file) == 0){
 			fgets(line,300,file);
@@ -270,165 +300,71 @@ Pila* loadHeaders(){
 					strcpy(h->subject, n);
 				cont++;
 			}
+			quitEnter(h->subject);
 			cont =0;
-			headers[cont] = h; //Lleno una estructura de Headers
-			insertar_pila(pila,h->professor);
+			insertar_pila(pila,h);
 	    }
 	}
 	fclose(file);
-	//imprimir_pila(pila);
 	return pila;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//Stack Functions
-//------------------------------//
-Pila * inicializacion (){
-	Pila *tas = (Pila*)malloc(sizeof(Pila));
-	tas->inicio = NULL;
-	tas->tamanio = 0;
-	return tas;
-}
- 
-/* apilar (a�adir) un elemento en la pila */
-int insertar_pila (Pila * tas, char *dato){
-  Elemento *nuevo_elemento;
- 
-  if ((nuevo_elemento = (Elemento *) malloc (sizeof (Elemento))) == NULL)
-    return -1;
-  if ((nuevo_elemento->dato = (char *) malloc (50 * sizeof (char)))== NULL)
-    return -1;
- 
-  strcpy (nuevo_elemento->dato, dato);
-  nuevo_elemento->siguiente = tas->inicio;
-  tas->inicio = nuevo_elemento;
-  tas->tamanio++;
-  return 0;
-}
- 
- 
-int quitar_pila (Pila * tas){
- 
-  Elemento *sup_elemento;
- 
-  if (tas->tamanio == 0)
-    return -1;
- 
-  sup_elemento = tas->inicio;
-  tas->inicio = tas->inicio->siguiente;
- 
-  free (sup_elemento->dato);
-  free (sup_elemento);
-  tas->tamanio--;
- 
-  return 0;
-}
- 
-/* visualizaci�n de la pila */
-void imprimir_pila (Pila * tas){
-  Elemento *actual;
-  int i;
-  actual = tas->inicio;
- 
-  for(i=0;i<tas->tamanio;++i){
-    printf("%s\n", actual->dato);
-    actual = actual->siguiente;
-  }
-}
-/*
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
- 
-typedef struct Elemento {
-    struct Header *contenido;
-    struct ElementoLista *siguiente;
-}Elemento;
- 
-
-typedef struct Header{
-	char *career,*professor,*subject;
-	int course, semester;
-}Header;
-
-typedef struct Pila{
-  Elemento *inicio;
-  int tamanio;
-} Pila;
  
 Pila * inicializacion (){
-	Pila *tas = (Pila*)malloc(sizeof(Pila));
-	tas->inicio = NULL;
-	tas->tamanio = 0;
-	return tas;
+     Pila *tas = (Pila*)malloc(sizeof(Pila));
+     tas->inicio = NULL;
+     tas->tamanio = 0;
+     return tas;
 }
  
 int insertar_pila (Pila * tas, Header *h){
-  Elemento *nuevo_elemento;
- 
-  if ((nuevo_elemento = (Elemento *) malloc (sizeof (Elemento))) == NULL)
-    return -1;
-  if ((nuevo_elemento->contenido = (Header *) malloc (sizeof (Header)))== NULL)
-    return -1;
-  nuevo_elemento->contenido = h;
-  //strcpy (nuevo_elemento->dato, dato);
-  nuevo_elemento->siguiente = tas->inicio;
-  tas->inicio = nuevo_elemento;
-  tas->tamanio++;
-  return 0;
+    Elemento *nuevo_elemento;
+    if ((nuevo_elemento = (Elemento *) malloc (sizeof (Elemento))) == NULL)
+       return -1;
+    if ((nuevo_elemento->contenido = (Header *) malloc (sizeof (Header)))== NULL)
+       return -1;
+    nuevo_elemento->contenido = h;
+    nuevo_elemento->siguiente = tas->inicio;
+    tas->inicio = nuevo_elemento;
+    tas->tamanio++;
+    return 0;
 }
  
  
 int quitar_pila (Pila * tas){
- 
-  Elemento *sup_elemento;
- 
-  if (tas->tamanio == 0)
-    return -1;
- 
-  sup_elemento = tas->inicio;
-  tas->inicio = tas->inicio->siguiente;
- 
-  free (sup_elemento->contenido);
-  free (sup_elemento);
-  tas->tamanio--;
-  return 0;
+    Elemento *sup_elemento;
+    if (tas->tamanio == 0)
+       return -1;
+    sup_elemento = tas->inicio;
+    tas->inicio = tas->inicio->siguiente;
+    free (sup_elemento->contenido);
+    free (sup_elemento);
+    tas->tamanio--;
+    return 0;
 }
  
 void imprimir_pila (Pila * tas){
-  Elemento *actual;
-  int i;
-  actual = tas->inicio;
+     Elemento *actual;
+     int i;
+     actual = tas->inicio;
   
-  for(i=0;i<tas->tamanio;++i){
-    //printf("\t%p - %s\n",actual, actual->dato);
-	  Header *h = actual->contenido;
-	  printf("Carrera: %s\nSemestre:%d\nCurso:%d\nProfesor:%s\nMateria:%s\n\n",h->career,h->semester,h->course,h->professor,h->subject);
-	  actual = actual->siguiente;
+     for(i=0;i<tas->tamanio;++i){
+         Header *h = actual->contenido;
+         printf("Carrera: %s\nSemestre:%d\nCurso:%d\nProfesor:%s\nMateria:%s\n\n",h->career,h->semester,h->course,h->professor,h->subject);
+         actual = actual->siguiente;
   }
 }
  
-int searchHeader(Pila *pila, Header *h){
+int buscar_Pila(Pila *pila, Header *h){
 	Elemento *actual;
 	int i;
 	actual = pila->inicio;
 	
 	for(i=0;i<pila->tamanio;++i){
 		Header *actual_h = actual->contenido;
-		if(strcmp(actual_h->career,h->career) && strcmp(actual_h->professor,h->professor) && strcmp(actual_h->subject,h->subject) && actual_h->course==h->course && actual_h->semester==h->semester){
+		if(strcmp(actual_h->career,h->career)==0 && strcmp(actual_h->professor,h->professor)==0 && strcmp(actual_h->subject,h->subject)==0 && actual_h->course==h->course && actual_h->semester==h->semester){
 			return 1; //Existe en la pila
 		}
 		actual = actual->siguiente;
@@ -436,60 +372,47 @@ int searchHeader(Pila *pila, Header *h){
 	return 0; //No existe en la pila
 
 }
-Header * createHeader(){
-	Header *tmp = (Header*)malloc(sizeof(Header));
-	tmp->career = (char *)malloc(50 * sizeof(char));
-	tmp->professor = (char *)malloc(50 * sizeof(char));
-	tmp->subject = (char *)malloc(50 * sizeof(char));
-	tmp->course = -1;
-	tmp->semester = -1;
-	return tmp;
-}
- 
-int main(int argc, char *argv[]){
-	Pila *pila = inicializacion();
-	Header *h1= createHeader();
-	Header *h2=  createHeader();
-	Header *h3= createHeader();
-	Header *h4= createHeader();
-	Header *h5= createHeader();
-	h1->career ="Ingieneria";
-	h1->course=5;
-	h1->professor="Caelos moreno";
-	h1->semester=8;
-	h1->subject="Programacion";
-	
-	h2->career ="Biologo";
-	h2->course=5;
-	h2->professor="Manuel Perez";
-	h2->semester=8;
-	h2->subject="Fisica";
-	
-	h3->career ="Economista";
-	h3->course=5;
-	h3->professor="Martha Lorenzo";
-	h3->semester=8;
-	h3->subject="Eocnoimia";
-	
-	h4->career ="Doctorado";
-	h4->course=5;
-	h4->professor="Marcos Tulio";
-	h4->semester=8;
-	h4->subject="Matematica";
 
 
-	h5->career ="Masterado";
-	h5->course=1;
-	h5->professor="Carlos Jordan";
-	h5->semester=8;
-	h5->subject="Matematica";
-	insertar_pila(pila,h1);
-	insertar_pila(pila,h2);
-	insertar_pila(pila,h3);
-	insertar_pila(pila, h4);
-	imprimir_pila(pila);
-	printf("Existe? : %d",searchHeader(pila,h5));
-	system("PAUSE");
-		return 0;
+int printOptionMenu(){
+    int op;
+     printf("\t\tLa informacion ha sido cargada exitosamente en memoria.\n");
+     printf("\tQue desea hacer?\n");
+     printf("1. Buscar una Cabecera\n");
+     printf("2. Imprimir  todas las cabeceras\n");
+     printf("3. Eliminar la ultima cabecera ingresada\n");
+     printf("Ingrese Opcion: ");
+     scanf("%d", &op);
+     return op;
 }
-*/
+
+
+void searchHeader(Pila *p){
+	int value;
+	 Header *h;
+     printf("\nIngrese informacion del header que desee buscar\n\n\n");
+     h = inputHeaderInfo();
+     value= buscar_Pila(p, h);
+     if(value == 1){
+         printf("El header que ud busca, se encontro!\n");
+     }else{
+         printf("El header qe ud busca, no existe!\n");
+     }
+     system("PAUSE");
+}
+
+void eliminateHeader(Pila *pila){
+     int value = quitar_pila(pila);
+     if(value == 0)
+         printf("Se elimino correctamente el header\n\n");
+     else 
+         printf("ERROR, no se pudo eliminar el ultimo header\n\n");
+     system("PAUSE");
+     }
+     
+void printInfo(Header *h){
+	 printf("\n\nCarrera: %s\nSemestre:%d\nCurso:%d\nProfesor:%s\nMateria:%s\n\n",h->career,h->semester,h->course,h->professor,h->subject);
+
+}
+     
+

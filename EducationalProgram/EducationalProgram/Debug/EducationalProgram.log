@@ -1,69 +1,70 @@
-﻿Compilación iniciada a las 25/02/2016 9:48:46 PM.
+﻿Compilación iniciada a las 28/02/2016 1:43:19 PM.
      1>Proyecto "C:\Users\user\Desktop\Project\EducationalProgram\EducationalProgram\EducationalProgram.vcxproj" en el nodo 2 (Build destinos).
      1>InitializeBuildStatus:
          Se creará "Debug\EducationalProgram.unsuccessfulbuild" porque se especificó "AlwaysCreate".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt main.c
          main.c
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(94): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(93): warning C4013: 'insertar_pila' sin definir; se supone que extern devuelve como resultado int
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(122): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : vea la declaración de 'strcpy'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(98): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(126): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(102): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(130): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(107): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(135): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : vea la declaración de 'strcpy'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(112): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(140): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : vea la declaración de 'strcpy'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(88): warning C4101: 'ln' : variable local sin referencia
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(124): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(115): warning C4101: 'ln' : variable local sin referencia
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(153): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : vea la declaración de 'fopen'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(146): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(175): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(148): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(177): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(150): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(179): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(152): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(181): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(154): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(183): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(156): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(185): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(158): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(187): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(160): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(189): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(139): warning C4101: 'final_prom' : variable local sin referencia
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(168): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(168): warning C4101: 'final_prom' : variable local sin referencia
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(197): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : vea la declaración de 'fopen'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(184): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(213): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(194): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(223): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : vea la declaración de 'fopen'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(250): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(279): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : vea la declaración de 'fopen'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(257): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(286): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : vea la declaración de 'strtok'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(259): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(288): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : vea la declaración de 'strcpy'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(260): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(289): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : vea la declaración de 'strtok'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(262): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(291): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : vea la declaración de 'strcpy'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(268): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(297): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : vea la declaración de 'strcpy'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(270): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(299): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : vea la declaración de 'strcpy'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(275): warning C4013: 'insertar_pila' sin definir; se supone que extern devuelve como resultado int
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(246): warning C4101: 'subject' : variable local sin referencia
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(246): warning C4101: 'career' : variable local sin referencia
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(246): warning C4101: 'professor' : variable local sin referencia
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(314): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : vea la declaración de 'strcpy'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(315): warning C4133: '=' : tipos incompatibles, de 'Elemento *' a 'ElementoLista *'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(330): warning C4133: '=' : tipos incompatibles, de 'ElementoLista *' a 'Elemento *'
-     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(347): warning C4133: '=' : tipos incompatibles, de 'ElementoLista *' a 'Elemento *'
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(275): warning C4101: 'subject' : variable local sin referencia
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(275): warning C4101: 'career' : variable local sin referencia
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(275): warning C4101: 'professor' : variable local sin referencia
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(328): warning C4133: '=' : tipos incompatibles, de 'Elemento *' a 'ElementoLista *'
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(340): warning C4133: '=' : tipos incompatibles, de 'ElementoLista *' a 'Elemento *'
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(355): warning C4133: '=' : tipos incompatibles, de 'ElementoLista *' a 'Elemento *'
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(369): warning C4133: '=' : tipos incompatibles, de 'ElementoLista *' a 'Elemento *'
+     1>c:\users\user\desktop\project\educationalprogram\educationalprogram\main.c(384): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : vea la declaración de 'scanf'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\Desktop\Project\EducationalProgram\Debug\EducationalProgram.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\Desktop\Project\EducationalProgram\Debug\EducationalProgram.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\Desktop\Project\EducationalProgram\Debug\EducationalProgram.lib" /MACHINE:X86 Debug\main.obj
          EducationalProgram.vcxproj -> C:\Users\user\Desktop\Project\EducationalProgram\Debug\EducationalProgram.exe
@@ -74,4 +75,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:01.15
+Tiempo transcurrido 00:00:01.22

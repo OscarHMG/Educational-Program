@@ -1,3 +1,5 @@
 Ingieneria en Cmputacion,3,5,Marcos MOncayo,Mateamtica
 Ingieneria en Computacion,8,9,Marlon bedoya,Biologia
 Ingieneria en Computacion,8,9,Oscar Moncayo,Matematica
+Ingieneria en Petroleos,10,10,Orlindo Ayovi,Matematica
+Ingieneria en Mercadotecnia,1,1,Julia Garcia,Biologia
